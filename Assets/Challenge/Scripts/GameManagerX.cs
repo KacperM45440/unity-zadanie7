@@ -51,7 +51,7 @@ public class GameManagerX : MonoBehaviour
         while (isGameActive)
         {
             yield return new WaitForSeconds(spawnRate);
-            int index = Random.Range(0, 5);
+            int index = Random.Range(0, 4);
 
             if (isGameActive)
             {
@@ -80,6 +80,11 @@ public class GameManagerX : MonoBehaviour
     {
         score += scoreToAdd;
         scoreText.text = "Score: "+ score;
+
+        if (score < 0)
+        {
+            GameOver();
+        }
     }
 
     public void UpdateTime()
@@ -87,7 +92,7 @@ public class GameManagerX : MonoBehaviour
         time -= 1;
         timeText.text = "Time: "+time;
 
-        if (time == 0)
+        if (time <= 0)
         {
             GameOver();
         }

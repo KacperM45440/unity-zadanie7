@@ -23,6 +23,11 @@ public class TargetX : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        StartCoroutine(Disappear());
+    }
+
     // When target is clicked, destroy it, update score, and generate explosion if object is bad - GameOver
     private void OnMouseDown()
     {
@@ -34,17 +39,17 @@ public class TargetX : MonoBehaviour
         }
                
     }
-    
+
     Vector3 RandomSpawnPosition()
     {
-        float spawnPosX = RandomSquareIndex() * spaceBetweenSquares;
-        float spawnPosY = RandomSquareIndex() * spaceBetweenSquares;
+        float spawnPosX = minValueX + (RandomSquareIndex() * spaceBetweenSquares);
+        float spawnPosY = minValueY + (RandomSquareIndex() * spaceBetweenSquares);
 
         Vector3 spawnPosition = new Vector3(spawnPosX, spawnPosY, 0);
         return spawnPosition;
 
     }
-    
+
     int RandomSquareIndex ()
     {
         return Random.Range(0, 4);
@@ -53,6 +58,12 @@ public class TargetX : MonoBehaviour
     void Explode ()
     {
         Instantiate(explosionFx, transform.position, explosionFx.transform.rotation);
+    }
+
+    IEnumerator Disappear()
+    {
+        yield return new WaitForSeconds(3f);
+        Destroy(gameObject);
     }
     
 
