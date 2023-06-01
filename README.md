@@ -1,2 +1,2 @@
-# unity-zadanie7
-Studia - Unity 1 - Challenge
+# Zadanie 7
+Pobierz grę i napraw wszystkie napotkane błędy/
