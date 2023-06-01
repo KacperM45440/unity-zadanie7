@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5817859361573320991}
   - component: {fileID: 5817859361574452191}
   - component: {fileID: 149579899260111814}
+  - component: {fileID: 5595106206397402950}
   m_Layer: 0
   m_Name: Cookie
   m_TagString: Untagged
@@ -98,3 +99,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointValue: 5
   explosionFx: {fileID: 8328426341284958323, guid: add0094915541482eba1289c3174a5ca, type: 3}
+--- !u!65 &5595106206397402950
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5817859361576445215}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5247512, y: 0.0671914, z: 0.5247512}
+  m_Center: {x: 0, y: -0.0000000018626634, z: -0.00000007450582}

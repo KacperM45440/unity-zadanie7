@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3881144743666381418}
   - component: {fileID: 3889057370497533620}
   - component: {fileID: 5736336060221426684}
+  - component: {fileID: 2242931151102440048}
   m_Layer: 0
   m_Name: Skull
   m_TagString: Bad
@@ -98,3 +99,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointValue: -50
   explosionFx: {fileID: 8328426341284958323, guid: ad604245d81df4d9faffb305340f5797, type: 3}
+--- !u!65 &2242931151102440048
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3867821073191959212}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.42912173, y: 0.5520756, z: 0.46483073}
+  m_Center: {x: 0, y: -0.026736578, z: -0.023982434}
