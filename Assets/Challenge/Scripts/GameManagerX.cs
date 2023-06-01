@@ -31,7 +31,7 @@ public class GameManagerX : MonoBehaviour
         StartCoroutine(SpawnTarget());
         StartCoroutine(TimeUpdate());
         score = 0;
-        time = 0;
+        time = 99;
         UpdateScore(0);
         titleScreen.SetActive(false);
     }
@@ -85,7 +85,9 @@ public class GameManagerX : MonoBehaviour
     public void UpdateTime()
     {
         time -= 1;
-        if(time == 0)
+        timeText.text = "Time: "+time;
+
+        if (time == 0)
         {
             GameOver();
         }
